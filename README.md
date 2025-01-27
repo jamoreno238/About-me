@@ -1,3 +1,3 @@
 # About-me
-El proyecto "About Me" es una aplicación diseñada para presentar mi perfil profesional como ingeniero de software. Su propósito principal es servir como una plataforma interactiva y atractiva que muestre mi experiencia, habilidades y trayectoria, además de los proyectos en los que he trabajado. 
+The "About Me" project is a landing page designed to showcase my professional profile as a software engineer. Its primary purpose is to serve as an interactive and visually appealing platform to highlight my experience, skills, and career journey, as well as the projects I have worked on.
 
