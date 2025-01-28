@@ -1,17 +1,15 @@
-import { Button } from "antd";
-import React from "react";
 import { saveAs } from "file-saver";
 
 function About() {
   // Función para manejar la descarga del CV en español
   const downloadCVSpanish = () => {
-    const url = "/assets/CV.pdf"; // Ruta corregida al archivo PDF
-    saveAs(url, "CV Josue Moreno.pdf");
+    const url = "/assets/Josue Moreno CV.pdf"; // Ruta corregida al archivo PDF
+    saveAs(url, "Josue Moreno CV.pdf");
   };
 
   const downloadCVEnglish = () => {
-    const url = "/assets/CV.pdf"; // Ruta corregida al archivo PDF
-    saveAs(url, "CV Josue Moreno English.pdf");
+    const url = "/assets/Josue Moreno CV - English.pdf"; // Ruta corregida al archivo PDF
+    saveAs(url, "Josue Moreno CV - English.pdf");
   };
 
   return (
@@ -19,42 +17,39 @@ function About() {
       <div className="basis-2/3 bg-gray-800 flex items-center justify-center p-5 relative rounded-l-lg">
         <div className="text-justify">
           <p className="text-lg mt-4 mb-4 text-lime-500">
-            Hola. Soy Josué Moreno (🇪🇨), Ingeniero de Software graduado de la
-            Universidad de las Fuerzas Armadas ESPE. Tengo 24 años de edad.
+            Hello. I am Josué Moreno (🇪🇨), a Software Engineer graduated from
+            the Armed Forces University ESPE. I am 24 years old.
           </p>
           <p className="text-lg mt-4 mb-4 text-lime-500">
-            Español: <span className="text-lime-700">Idioma nativo</span>
+            Spanish: <span className="text-lime-700">Native language</span>
           </p>
           <p className="text-lg mt-4 mb-4 text-lime-500">
-            Inglés: <span className="text-lime-700">Intermedio</span>
+            English: <span className="text-lime-700">Intermediate</span>
           </p>
           <p className="text-xl font-title font-bold mb-4 text-lime-500">
-            Experiencia laboral:
+            Work Experience:
           </p>
           <div className="text-lg mb-4 text-lime-700">
             <p className="text-lime-500">
-              TICKETSTAR365 - Quito, Ecuador (mayo 2023 - julio 2023)
+              TICKETSTAR365 - Quito, Ecuador (May 2023 - July 2023)
             </p>
-            <p className="text-lime-500">Desarrollador de Software</p>
+            <p className="text-lime-500">Software Developer</p>
             <p className="text-lime-700">
-              Desarrollo y mantenimiento de una plataforma web para gestión de
-              eventos y venta de tickets, utilizando tecnologías como HTML, CSS,
-              Bootstrap, PHP y JavaScript.
+              Development and maintenance of a web platform for event management
+              and ticket sales, using technologies such as HTML, CSS, Bootstrap,
+              PHP, and JavaScript.
             </p>
           </div>
           <div className="text-lg mb-4">
             <p className="text-lime-500">
-              FAME S.A. – Sangolquí, Ecuador (octubre 2022 - diciembre 2022)
+              FAME S.A. – Sangolquí, Ecuador (October 2022 - December 2022)
             </p>
-            <p className="text-lime-500">
-              Desarrollador de Software (Pasantía)
-            </p>
+            <p className="text-lime-500">Software Developer (Internship)</p>
             <p className="text-lime-700">
-              Liderazgo en el desarrollo de una aplicación de gestión de calzado
-              en Android Studio, automatizando procesos manuales con Java.
-              Implementación de Firebase Realtime Database para gestión de datos
-              en tiempo real y refuerzo de la seguridad de los usuarios mediante
-              la integración de la autenticación de Firebase.
+              Led the development of a footwear management application in
+              Android Studio, automating manual processes with Java. Implemented
+              Firebase Realtime Database for real-time data management and
+              enhanced user security by integrating Firebase authentication.
             </p>
           </div>
         </div>

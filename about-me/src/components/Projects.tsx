@@ -1,26 +1,44 @@
-import React, { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import systemA from "../img/systemA.png";
 import inpro360 from "../img/inpro360.png";
 import guitar from "../img/guitar.png";
 import { GithubFilled, ChromeFilled } from "@ant-design/icons";
+import { gsap } from "gsap";
 
 function Projects() {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null); // Estado acepta string o null
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const cardsRef = useRef<HTMLDivElement | null>(null);
 
   const handleImageClick = (image: string) => {
-    setSelectedImage(image); // Actualiza el estado con la URL de la imagen seleccionada
+    setSelectedImage(image);
   };
 
   const closeImage = () => {
-    setSelectedImage(null); // Restablece el estado a null
+    setSelectedImage(null);
   };
+
+  useEffect(() => {
+    const cards = cardsRef.current?.children;
+    if (cards) {
+      gsap.fromTo(
+        cards,
+        { y: 100, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.3,
+          duration: 1,
+          ease: "power1.out",
+        }
+      );
+    }
+  }, []);
 
   return (
     <div className="relative">
-      {/* Modal para mostrar la imagen ampliada */}
       {selectedImage && (
         <button
-          className="fixed inset-0 bg-black/500  backdrop-blur-sm flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/500 backdrop-blur-sm flex items-center justify-center z-50"
           onClick={closeImage}
         >
           <img
@@ -31,8 +49,10 @@ function Projects() {
         </button>
       )}
 
-      {/* Contenido principal */}
-      <div className="w-[1100px] bg-primary-500 shadow-lg rounded-lg flex gap-6 p-6">
+      <div
+        ref={cardsRef}
+        className="w-[1100px] bg-primary-500 shadow-lg rounded-lg flex gap-6 p-6"
+      >
         <div className="flex-1 bg-gray-800 rounded-lg shadow-md">
           <button
             className="w-full focus:outline-none"
@@ -125,7 +145,6 @@ function Projects() {
               and access detailed information for each one.
             </p>
           </div>
-
           <div className="flex justify-center">
             <a
               href="https://www.inpro360.com/catalogoView"
