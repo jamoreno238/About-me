@@ -247,7 +247,7 @@ function Inicio() {
           id="footer"
           className="bg-gray-800 h-12 flex items-center justify-center"
         >
-          <p className="text-white text-sm">© 2025 ABOUT ME</p>
+          <p className="text-lime-500 text-sm">© 2025 ABOUT ME</p>
         </div>
       </div>
     </div>
