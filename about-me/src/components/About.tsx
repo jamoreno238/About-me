@@ -13,7 +13,7 @@ function About() {
   };
 
   return (
-    <div className="w-[1000px] min-h-[500px] bg-primary-500 flex relative rounded-lg shadow-md">
+    <div className="mt-20 mb-10 md:mb-0 lg:mb-0 md:mt-0 lg:mt-0 w-full max-w-[1000px] bg-primary-500 flex flex-col md:flex-row relative rounded-lg shadow-md">
       <div className="basis-2/3 bg-gray-800 flex items-center justify-center p-5 relative rounded-l-lg">
         <div className="text-justify">
           <p className="text-lg mt-4 mb-4 text-lime-500">
@@ -55,13 +55,13 @@ function About() {
         </div>
       </div>
 
-      <div className="basis-1/3 bg-gray-900 relative rounded-r-lg flex flex-col items-center justify-center">
+      <div className="basis-1/3 mt-8 md:mt-0 lg:mt-0 bg-gray-900 relative rounded-r-lg flex flex-col items-center justify-center">
         <div className="absolute top-0 left-10 w-8 h-8 border-l-2 border-t-2 border-lime-500"></div>
         <div className="absolute top-0 right-10 w-8 h-8 border-r-2 border-t-2 border-lime-500"></div>
         <div className="absolute bottom-0 left-10 w-8 h-8 border-l-2 border-b-2 border-lime-500"></div>
         <div className="absolute bottom-0 right-10 w-8 h-8 border-r-2 border-b-2 border-lime-500"></div>
 
-        <div className="flex flex-col space-y-4 mt-8">
+        <div className="flex flex-col space-y-4 ">
           <button
             className="ml-4 text-white bg-lime-700 w-32 h-auto p-2 text-lg rounded-lg shadow-lg transition duration-300 ease-in-out transform hover:bg-lime-900 hover:scale-105"
             onClick={downloadCVSpanish}

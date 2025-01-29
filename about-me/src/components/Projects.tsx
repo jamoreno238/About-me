@@ -51,9 +51,10 @@ function Projects() {
 
       <div
         ref={cardsRef}
-        className="w-[1100px] bg-primary-500 shadow-lg rounded-lg flex gap-6 p-6"
+        className="w-full mt-10 bg-primary-500 shadow-lg rounded-lg flex flex-wrap gap-6 p-6 justify-center"
       >
-        <div className="flex-1 bg-gray-800 rounded-lg shadow-md">
+        {/* Card 1 */}
+        <div className="flex-grow basis-full sm:basis-[48%] lg:basis-[30%] bg-gray-800 rounded-lg shadow-md">
           <button
             className="w-full focus:outline-none"
             onClick={() => handleImageClick(systemA)}
@@ -89,7 +90,8 @@ function Projects() {
           </div>
         </div>
 
-        <div className="flex-1 bg-gray-800 rounded-lg shadow-md">
+        {/* Card 2 */}
+        <div className="flex-grow basis-full sm:basis-[48%] lg:basis-[30%] bg-gray-800 rounded-lg shadow-md">
           <button
             className="w-full focus:outline-none"
             onClick={() => handleImageClick(guitar)}
@@ -116,14 +118,15 @@ function Projects() {
               href="https://github.com/jamoreno238/Guitar-TS"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lime-500 hover:text-lime-400 text-4xl"
+              className="text-lime-500 hover:text-lime-400 text-4xl mb-4"
             >
               <GithubFilled />
             </a>
           </div>
         </div>
 
-        <div className="flex-1 bg-gray-800 rounded-lg shadow-md">
+        {/* Card 3 */}
+        <div className="flex-grow basis-full sm:basis-[48%] lg:basis-[30%] bg-gray-800 rounded-lg shadow-md">
           <button
             className="w-full focus:outline-none"
             onClick={() => handleImageClick(inpro360)}
@@ -150,7 +153,7 @@ function Projects() {
               href="https://www.inpro360.com/catalogoView"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-lime-500 hover:text-lime-400 text-4xl"
+              className="text-lime-500 hover:text-lime-400 text-4xl mb-4"
             >
               <ChromeFilled />
             </a>
