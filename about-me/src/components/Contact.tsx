@@ -17,7 +17,7 @@ function Contact() {
 
     const myForm = event.target as HTMLFormElement; // Asegura que `myForm` es un formulario
     const formData = new FormData(myForm);
-
+    alert("Se ha enviado con éxito");
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -62,7 +62,7 @@ function Contact() {
                   placeholder="Enter your name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full !bg-gray-800 !focus:bg-gray-800 border-b border-neutral-400 focus:outline-none focus:border-lime-500 py-2 text-lime-500 text-lg md:text-2xl lg:text-lg font-montserrat"
+                  className="w-full !bg-gray-800 border-b !focus:bg-gray-800 border-neutral-400 text-lg md:text-2xl lg:text-lg focus:outline-none focus:border-lime-500 py-2 text-lime-500 font-montserrat resize-none"
                 />
               </div>
               <div>
@@ -79,7 +79,7 @@ function Contact() {
                   placeholder="Enter your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full !bg-gray-800 !focus:bg-gray-800 border-b border-neutral-400 focus:outline-none focus:border-lime-500 py-2 text-lime-500 text-lg md:text-2xl lg:text-lg font-montserrat"
+                  className="w-full !bg-gray-800 border-b !focus:bg-gray-800 border-neutral-400 text-lg md:text-2xl lg:text-lg focus:outline-none focus:border-lime-500 py-2 text-lime-500 font-montserrat resize-none"
                 />
               </div>
             </div>
