@@ -12,13 +12,20 @@ function Contact() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
-  // const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   alert("Mensaje enviado con éxito!");
-  //   setName("");
-  //   setEmail("");
-  //   setMessage("");
-  // };
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+
+    const myForm = event.target as HTMLFormElement; // Asegura que `myForm` es un formulario
+    const formData = new FormData(myForm);
+
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData as never).toString(), // Conversión segura
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
+  };
 
   return (
     <div className="mt-20 mb-10 md:mb-0 lg:mb-0 md:mt-0 lg:mt-0 w-full max-w-[1000px] bg-primary-500 flex flex-col-reverse lg:flex-row relative rounded-lg shadow-md">
@@ -34,9 +41,10 @@ function Contact() {
 
           <form
             className="space-y-8"
-            data-netlify="true"
             name="contact"
             method="POST"
+            onSubmit={handleSubmit}
+            data-netlify="true"
           >
             <input type="hidden" name="form-name" value="contact" />
             <div className="grid grid-cols-2 gap-6">
@@ -54,7 +62,7 @@ function Contact() {
                   placeholder="Enter your name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  className="w-full bg-gray-800 focus:bg-gray-800 border-b border-neutral-400 focus:outline-none focus:border-lime-500 py-2 text-lime-500 text-lg md:text-2xl lg:text-lg font-montserrat"
+                  className="w-full !bg-gray-800 !focus:bg-gray-800 border-b border-neutral-400 focus:outline-none focus:border-lime-500 py-2 text-lime-500 text-lg md:text-2xl lg:text-lg font-montserrat"
                 />
               </div>
               <div>
@@ -71,7 +79,7 @@ function Contact() {
                   placeholder="Enter your email address"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-gray-800 focus:bg-gray-800 border-b border-neutral-400 focus:outline-none focus:border-lime-500 py-2 text-lime-500 text-lg md:text-2xl lg:text-lg font-montserrat"
+                  className="w-full !bg-gray-800 !focus:bg-gray-800 border-b border-neutral-400 focus:outline-none focus:border-lime-500 py-2 text-lime-500 text-lg md:text-2xl lg:text-lg font-montserrat"
                 />
               </div>
             </div>
@@ -88,7 +96,7 @@ function Contact() {
                 placeholder="Hello! Write to me whatever you want to tell me!"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="w-full bg-gray-800 border-b focus:bg-gray-800 border-neutral-400 text-lg md:text-2xl lg:text-lg focus:outline-none focus:border-lime-500 py-2 text-lime-500 font-montserrat resize-none"
+                className="w-full !bg-gray-800 border-b !focus:bg-gray-800 border-neutral-400 text-lg md:text-2xl lg:text-lg focus:outline-none focus:border-lime-500 py-2 text-lime-500 font-montserrat resize-none"
               ></textarea>
             </div>
             <div className="text-center">
