@@ -26,7 +26,6 @@ function Home() {
   const iconsRef = useRef<HTMLDivElement | null>(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Referencias para los botones del menú
   const menuButtonsRef = useRef<(HTMLSpanElement | HTMLButtonElement)[]>([]);
   const menuButtonsRef2 = useRef<
     (HTMLSpanElement | HTMLButtonElement | null)[]
@@ -72,10 +71,10 @@ function Home() {
               </h1>
               <br />
               <p ref={textRef} className="text-lg mt-4 text-center mb-10">
-                Software Engineer graduated from the Escuela Superior
-                Politécnica del Ejército (ESPE) in Ecuador with experience in
-                Full Stack development, focused on creating innovative and
-                high-impact technological solutions.
+                Software Engineer graduated from the Universidad de las Fuerzas
+                Armadas (ESPE) in Ecuador with experience in Full Stack
+                development, focused on creating innovative and high-impact
+                technological solutions.
               </p>
               <div
                 ref={iconsRef}
@@ -131,6 +130,8 @@ function Home() {
       );
   }
 
+  // Animaciones GSAP
+
   useEffect(() => {
     if (content === "main") {
       gsap.fromTo(
@@ -154,7 +155,6 @@ function Home() {
         { y: 0, opacity: 1, duration: 1, delay: 0.9 }
       );
 
-      // Animación para el menú
       menuButtonsRef.current.forEach((button, index) => {
         gsap.fromTo(
           button,

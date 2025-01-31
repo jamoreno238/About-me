@@ -1,14 +1,14 @@
 import { saveAs } from "file-saver";
 
 function About() {
-  // Función para manejar la descarga del CV en español
+  // Función descargar pdf
   const downloadCVSpanish = () => {
-    const url = "/assets/Josue Moreno CV.pdf"; // Ruta corregida al archivo PDF
+    const url = "/assets/Josue Moreno CV.pdf"; 
     saveAs(url, "Josue Moreno CV.pdf");
   };
 
   const downloadCVEnglish = () => {
-    const url = "/assets/Josue Moreno CV - English.pdf"; // Ruta corregida al archivo PDF
+    const url = "/assets/Josue Moreno CV - English.pdf"; 
     saveAs(url, "Josue Moreno CV - English.pdf");
   };
 
@@ -18,7 +18,7 @@ function About() {
         <div className="text-justify">
           <p className="text-lg mt-4 mb-4 text-lime-500">
             Hello. I am Josué Moreno (🇪🇨), a Software Engineer graduated from
-            the Armed Forces University ESPE. I am 24 years old.
+            the Universidad de las Fuerzas Armadas (ESPE). I am 24 years old.
           </p>
           <p className="text-lg mt-4 mb-4 text-lime-500">
             Spanish: <span className="text-lime-700">Native language</span>

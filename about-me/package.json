@@ -16,6 +16,7 @@
     "@mui/styled-engine-sc": "^6.4.0",
     "@tailwindcss/vite": "^4.0.0",
     "antd": "^5.23.2",
+    "emailjs-com": "^3.2.0",
     "file-saver": "^2.0.5",
     "font-awesome": "^4.7.0",
     "gsap": "^3.12.7",
