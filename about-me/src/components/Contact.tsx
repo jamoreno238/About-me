@@ -150,7 +150,7 @@ function Contact() {
             <div className="flex items-center gap-3 mb-4 text-lime-500 justify-center md:text-2xl">
               <PhoneFilled className="text-3xl md:text-4xl" />
               <a
-                href="https://w.app/josuedeveloper"
+                href="https://wa.link/gmrsd3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xl md:text-2xl font-medium hover:underline"
@@ -201,7 +201,7 @@ function Contact() {
             <div className="flex items-center gap-3 text-lime-500">
               <PhoneFilled className="text-2xl" />
               <a
-                href="https://w.app/josuedeveloper"
+                href="https://wa.link/gmrsd3"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xl font-medium hover:underline"

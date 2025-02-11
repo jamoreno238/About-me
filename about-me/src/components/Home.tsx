@@ -88,7 +88,7 @@ function Home() {
                   <LinkedinFilled className="text-lime-500 text-2xl hover:underline" />
                 </a>
                 <a
-                  href="https://w.app/josuedeveloper"
+                  href="https://wa.link/gmrsd3"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
